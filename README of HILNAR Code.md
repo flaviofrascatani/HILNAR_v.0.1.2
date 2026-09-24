@@ -1,11 +1,13 @@
 - **Author:** Flavio Frascatani
 - **Version:** 0.1.2
-- **DOI: https://doi.org/10.5281/zenodo.22847128** 
+- **DOI: https://doi.org/10.5281/zenodo.22847128**
+- **DOI of the paper linked: https://doi.org/10.5281/zenodo.22847251**
+- **Paper linked: Between Europe and Russia: Two Centuries of Belarusian Historical Narratives (1795–2025).​**
 - **Licence:** MIT 
 - **Contact:** [flavio.frascatani@gmail.com](mailto:flavio.frascatani@gmail.com)
 
 
-HILNAR (Hilbertian LLM Narrative Geometry) is designed to process documents inserted in the file corpus.py and analyse (historical) narrative shifts. 
+HILNAR (Hilbertian Narrative Geometry) is designed to process documents inserted in the file corpus.py and analyse (historical) narrative shifts. 
 It creates positive pointwise mutual information (PPMI) co-occurrence vectors for each combination of sector and year, projects them into a shared low-dimensional frame, and computes three indices:
 
 - NSI (Narrative Shift Index):         displacement of a certain set of documents between two years
@@ -28,7 +30,7 @@ As for now HILNAR is a prototype and it must be read as giving suggestive but st
 - The documents were selected by hand and generally in pairs (for example the New Year address of 2019 of Lukashenka and the one of 2025 both taken in the same source https://president.gov.by)
 - The language of the documents is mainly Russian, representing the fact that only 3% of Belarusians use Belarusian in everyday communications (Posokhin, 2019, p. 73), even if for the language used at home this following percentage rises to 26% (National Statistical Committee of the Republic of Belarus, 2020, p. 44).
 
-- The sign of the change in TDI depends on whether Procrustes rotation is applied per slice. For this corpus and analysis, the rotation is off because all slices share the same context columns, so their vectors are already co-framed, and a per-slice Procrustes rotation removes the very drift the NSI measures. The pooled basis avoids privileging a single slice, although it is weighted  towards Education 2019 (56% of tokens). The default specification is for now `rotate=False`. `specification_grid()` reports both settings, and `fig_robustness.png` shows the full distribution. (These choices were made before inspecting the prototype results of the Beta version).
+- The sign of the change in TDI depends on whether Procrustes rotation is applied per slice. For this corpus and analysis, the rotation is off because all slices share the same context columns, so their vectors are already co-framed, and a per-slice Procrustes rotation removes the very drift the NSI measures. The pooled basis avoids privileging a single slice, although it is weighted  towards Education 2019 (56% of tokens). The default specification is for now `rotate=False`. `specification_grid()` reports both settings, and `fig_robustness.png` shows the full distribution. (These choices were made before inspecting the results).
 
 
 
